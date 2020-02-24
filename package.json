@@ -5,7 +5,9 @@
   "author": "Reynaldo Layme <layme.reynaldo@icloud.com>",
   "license": "MIT",
   "scripts": {
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development"
   },
   "husky": {
     "hooks": {
@@ -14,14 +16,25 @@
     }
   },
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "babel-loader": "^8.0.6",
     "cz-conventional-changelog": "3.1.0",
-    "husky": "^4.2.3"
+    "husky": "^4.2.3",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   }
 }
