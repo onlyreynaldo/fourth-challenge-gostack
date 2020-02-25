@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-// import { Container } from './styles';
-
-export default class Comment extends Component {
-  render() {
-    return (
-      <div>
-        <h4>Comment</h4>
-      </div>
-    );
-  }
+export default function Comment({ data }) {
+  return (
+    <li key={data.id}>
+      <img src={data.author.avatar} alt={data.author.name} />
+      <strong>{data.author.name}</strong>
+      <p>{data.content}</p>
+    </li>
+  );
 }
