@@ -1,5 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
 body {
-  background: #7159c1;
-  color: #fff;
+  background: #F2F2F2;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  min-width: 1024px;
+  height: 64px;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  padding: 0 42px;
+  background: #4A90E2;
+  color: #ffffff;
+}
+
+header img {
+  padding-left: 24px;
+}
+
+.postList {
+  width: 700px;
+  margin: 0 auto 20px;
+}
+
+.postList ul {
+  list-style: none;
+}
+
+.post {
+  margin-top: 20px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  padding: 20px;
+  line-height: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author .details {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  color: #9a9a9a;
+  line-height: 14px;
+}
+
+.author .details span:first-child {
+  font-size: 14px;
+  color: #4a4a4a;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.content-author {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #eeeeee;
 }
