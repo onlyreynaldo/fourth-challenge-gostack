@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
-// import { Container } from './styles';
+import facebookLogo from '../../assets/facebook-1.png';
 
 export default class Header extends Component {
   render() {
     return (
       <header>
-        <h1>Head</h1>
+        <img src={facebookLogo} alt="Facebook Challenge"/>
+        <strong>Meu Perfil</strong>
       </header>
     );
   }
