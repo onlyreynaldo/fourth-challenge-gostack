@@ -1,3 +1,8 @@
-const sumFun = (a, b) => a + b;
+import React from 'react';
+import { render } from 'react-dom';
+import App from './App';
 
-alert(sumFun(1,3));
+render(
+  <App />,
+  document.getElementById('app')
+);
