@@ -6,8 +6,13 @@ export default class Header extends Component {
   render() {
     return (
       <header>
-        <img src={facebookLogo} alt="Facebook Challenge"/>
-        <strong>Meu Perfil</strong>
+        <nav>
+          <img src={facebookLogo} alt="Facebook Challenge"/>
+          <div>
+            <span>Meu perfil</span>
+            <i className="material-icons">account_circle</i>
+          </div>
+        </nav>
       </header>
     );
   }

@@ -2,23 +2,23 @@ import React from 'react';
 
 import Comment from '../Comment';
 
-export default function Post({ data }) {
+export default function Post({ id, author, date, content, comments }) {
   return (
     <div className="post">
-      <li key={data.id}>
-        <div className="author">
-          <img src={data.author.avatar} alt={data.author.name}/>
-          <div className="details">
-            <span>{data.author.name}</span>
-            <span>{data.date}</span>
+      <ul>
+        <li key={id}>
+          <div className="author">
+            <img src={author.avatar} alt={author.name} className="avatar" />
+            <div className="details">
+              <span>{author.name}</span>
+              <span>{date}</span>
+            </div>
           </div>
-        </div>
-        <p className="content-author">{data.content}</p>
-        <div className="divider" />
-        <ul>
-          { data.comments.map(comment => <Comment key={comment.id} data={comment} />)}
-        </ul>
-      </li>
+          <p className="content-author">{content}</p>
+          <div className="divider" />
+          { comments.map(comment => <Comment key={comment.id} {...comment} />)}
+        </li>
+      </ul>
     </div>
   );
 }
